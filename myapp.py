@@ -3,22 +3,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-try:
-    from scipy.stats import pearsonr
-except ImportError:
-    # Fallback if scipy is not installed
-    def pearsonr(x, y):
-        import numpy as np
-        x = np.array(x)
-        y = np.array(y)
-        n = len(x)
-        mean_x, mean_y = x.mean(), y.mean()
-        num = ((x - mean_x) * (y - mean_y)).sum()
-        den = ((x - mean_x)**2).sum() ** 0.5 * ((y - mean_y)**2).sum() ** 0.5
-        r = num / den if den != 0 else 0
-        from scipy import stats
-        p_value = 2 * (1 - stats.t.cdf(abs(r * (n - 2) ** 0.5 / (1 - r**2 + 1e-10) ** 0.5), n - 2))
-        return r, p_value
+from scipy.stats import pearsonr
 # -----------------------------------
 
 # ---------- COnstantes de datos ----------

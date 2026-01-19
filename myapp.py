@@ -23,7 +23,7 @@ st.set_page_config(
 # -----------------------------------------------
 
 # ------- BANNER IZQUIERDO Y PANEL DE INFORMACIÓN DEL CURSO -------
-st.sidebar.image("/home/dnalli/Escritorio/Magistee/imgs/Universidad-autonoma-de-chile.png")
+st.sidebar.image("imgs/Universidad-autonoma-de-chile.png")
 st.sidebar.markdown("""
         # Universidad Autonoma de Chile
         **Curso:** Toma de decisiones basada en datos         
@@ -119,7 +119,7 @@ elif seccion == "Análisis":
     st.header("Análisis")
 
     st.subheader("Clasificación de datos")
-    st.image("/home/dnalli/Escritorio/Magistee/imgs/claisifcacion de datos.png", caption="Clasificación de datos")
+    st.image("imgs/claisifcacion de datos.png", caption="Clasificación de datos")
 
     st.subheader("Análisis estadístico descriptivo")
 
